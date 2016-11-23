@@ -1,6 +1,6 @@
 #JS 
 
-/// Closure - Object Oriented(Stefan Steyanov)
+/// Closure - Object Oriented(Stoyan Stefanov)
 
 function f() {
     function makeClosure(x) {
