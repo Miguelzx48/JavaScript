@@ -5,7 +5,7 @@ Create a constructor called MyArray() that behaves as close to Array() as possib
 var MyArray = function() {
             var args = arguments;
             this.length = 0;
-            for (var i in args) {
+            for (var i in args) { 
                 this[this.length] = args[i];
                 this.length++;
             }
@@ -20,7 +20,7 @@ var MyArray = function() {
 
             this.push = function(push) {
                 var newLength = args.length++;
-                args[newLength] = push;
+                args[newLength] = push;// Asigna a args los valores que se ingrese, es necesario para la funcion toString y this[n]
                 this[newLength] = push;
                 this.length++;
                 return this.length;
