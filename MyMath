@@ -22,5 +22,13 @@ function MyMath() {
                     return menor;
                 }
             }
+            this.rand = function (modulus,a, c, seed){/// NO FUNCIONA 'BIEN' ->> teorema lgc
+                     if (seed != undefined){
+                     this.previous = seed;
+                        }
+                     var randomnumber = (this.previous * a + c) % modulus;//Math.pow(2,30);
+                     this.previous = randomnumber;
+                     return randomnumber;
+             }
  }
 
