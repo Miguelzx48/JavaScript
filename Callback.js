@@ -2,7 +2,7 @@
 
 // Callback - Object Oriented (Stoyan Stefanov)
 
-ar myarr = [];
+var myarr = [];
 
 function multiplyByTwo(a, b, c, callback) {
     var i, ar = [];
