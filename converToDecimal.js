@@ -5,3 +5,8 @@ decimal = function(numero) {// numero-> arreglo de decimales
             }
             return decimales;
         }
+///////////// MEJORADO
+
+decimal = function(numero) {
+            return numero.map(e => parseInt(String(e), 2)); 
+        }
