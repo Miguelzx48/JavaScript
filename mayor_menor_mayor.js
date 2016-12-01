@@ -32,3 +32,24 @@ var organizar = function(arreglo, tipo) {
                 return arreglo.reverse();
             }
         }
+
+////////////// mejorado
+
+organizar = function(arreglo, tipo) {
+            this.arreglo = arreglo;
+            var i = 0;
+            var condicion = false;
+            var menor = 0;
+            while (condicion == false) {
+                arreglo.map((e, i) => e > arreglo[i + 1] ? (menor = arreglo[i + 1], arreglo[i + 1] = arreglo[i], arreglo[i] = menor) : e);
+                while (condicion == false && i < 1) {
+                    for (let j = 0; arreglo.length - 1 > j; j++) {
+                        condicion = arreglo[j + 1] >= arreglo[j] ? true : (j = arreglo.length, false);
+                    }
+                    i = 1;
+                }
+                i = 0;
+            }
+            return tipo.toLowerCase() == 'menor' ? arreglo : arreglo.reverse();
+        }
+
