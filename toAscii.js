@@ -8,3 +8,12 @@
             }
             return codigos;
         }
+
+ 
+ //////// mejorado
+ 
+ toAscii = function(texto) {
+                var caracteres = String(texto).split('');
+                return caracteres.map(e => e.charCodeAt(0)); 
+ }
+            
