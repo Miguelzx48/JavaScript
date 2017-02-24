@@ -53,3 +53,23 @@ organizar = function(arreglo, tipo) {
             return tipo.toLowerCase() == 'menor' ? arreglo : arreglo.reverse();
         }
 
+///////////////////// ES6
+
+organizar = function(arreglo, tipo) {
+            this.arreglo = arreglo;
+            var i = 0;
+            var condicion = false;  
+            //var menor = 0;
+            while (condicion == false) {
+                arreglo.map((e, i) => e > arreglo[i + 1] ? [arreglo[i + 1], arreglo[i] = [arreglo[i], arreglo[i+1]]  : e);
+                while (condicion == false && i < 1) {
+                    for (let j = 0; arreglo.length - 1 > j; j++) {
+                        condicion = arreglo[j + 1] >= arreglo[j] ? true : (j = arreglo.length, false);
+                    }
+                    i = 1;
+                }
+                i = 0;
+            }
+            return tipo.toLowerCase() == 'menor' ? arreglo : arreglo.reverse();
+        }
+
